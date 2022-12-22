@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/9ff456d83f.js" crossorigin="anonymous"></script>
+    </script>
+    <title>Document</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <title>Buy Tickets</title>
+</head>
+
+<body>
+    <!--Tickets-->
+    <h1 class="ticket-header">Select Tickets</h1>
+    <div class="flex2-main">
+        <div class="flex-class2">
+            <h2>Category</h2>
+            <h2>Price(LKR.)</h2>
+            <h2>Tickets</h2>
+            <h2>Ticket Cost</h2>
+        </div>
+        <div class="flex-class3">
+            <div><i class="fa-solid fa-person"></i> Local Adult</div>
+            <div>
+                <p>1200</p>
+            </div>
+            <div class="box">
+                <!-- <label>Sri Lankan-Adult</label> -->
+                <button id="buttons" class="decrease btn">-</button>
+                <input type="text" id="one" value="0" class="input">
+                <button id="buttons" class="increase btn">+</button>
+            </div>
+            <div>
+                <p id="tkt-dis1" class="padding">0</p>
+            </div>
+        </div>
+        <div class="flex-class3">
+            <div><i class="fa-solid fa-person"></i> Local Child</div>
+            <div>
+                <p>700</p>
+            </div>
+            <div class="box">
+                <!-- <label>Sri Lankan-Child</label> -->
+                <button id="buttons" class="decrease btn">-</button>
+                <input type="text" id="two" value="0" class="input">
+                <button id="buttons" class="increase btn">+</button>
+            </div>
+            <div>
+                <p id="tkt-dis2" class="padding2">0</p>
+            </div>
+        </div>
+        <div class="flex-class3">
+            <div><i class="fa-solid fa-person"></i> Foreign Adult</div>
+            <div>
+                <p>5500</p>
+            </div>
+            <div class="box">
+                <!-- <label>Foreigner-Adult</label> -->
+                <button id="buttons" class="decrease btn">-</button>
+                <input type="text" id="three" value="0" class="input">
+                <button id="buttons" class="increase btn">+</button>
+            </div>
+            <div>
+                <p id="tkt-dis3" class="padding3">0</p>
+            </div>
+        </div>
+        <div class="flex-class3">
+            <div><i class="fa-solid fa-person"></i> Foreign Child</div>
+            <div>
+                <p>2700</p>
+            </div>
+            <div class="box">
+                <!-- <label>Foreigner-Child</label> -->
+                <button id="buttons" class="decrease btn">-</button>
+                <input type="text" id="four" value="0" class="input">
+                <button id="buttons" class="increase btn">+</button>
+            </div>
+            <div>
+                <p id="tkt-dis4" class="padding3">0</p>
+            </div>
+        </div>
+    </div>
+    <div class="disclaimer">
+        <h4>Notice*</h4>
+        <h5>Infants Local/Foreign Walk in FREE</h5>
+        <h5>For time period more than Three hours Will have Additional Charges.</h5>
+        <h5>Local Adult/Child for Half Day will be charged Rs.350 and for Full Day will be charged Rs.600 PER PERSON
+        </h5>
+        <h5>Foreign Adult/Child for Half Day will be charged Rs.450 and for Full Day will be charged Rs.800 PER PERSON
+        </h5>
+    </div>
+    <div class="flex-class4">
+        <h2>Select Duration</h2>
+        <div></div>
+        <div class="duration-class">
+            <select class="duration" onchange="GetTotal(this)">
+                <option name="time" value="default">3hrs</option>
+                <option name="time" value="onee">Half Day</option>
+                <option name="time" value="twoo">Full Day</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="flex-class3">
+        <h2> Total Cost(LKR.)</h2>
+        <div><!--increase decrease --></div>
+        <div>
+            <p id="current-order-cost">0</p>
+        </div>
+        <!--Add to order-->
+        <div><button id="btnn1" class="btnn" onclick="storeCost()"><i class="fa-regular fa-heart"></i></button></div>
+        <div><button id="add-to-order-btn">Add To Order</button></div>
+    </div>
+
+    <div class="add-to-order-css">
+    </div>
+    <!--Overall order and cost-->
+    <h2 class="overall-header">Overall Order Details</h2>
+    <div>
+        <div class="flex-class5">
+            <h2>Category</h2>
+            <h2>Tickets</h2>
+        </div>
+        <div class="flex-class6">
+            <div><i class="fa-solid fa-person"></i> Local Adult</div>
+            <div>
+                <p id="show-tk1">0</p>
+            </div>
+        </div>
+        <div class="flex-class6">
+            <div><i class="fa-solid fa-person"></i> Local Child</div>
+            <div>
+                <p id="show-tk2">0</p>
+            </div>
+        </div>
+        <div class="flex-class6">
+            <div><i class="fa-solid fa-person"></i> Foreign Adult</div>
+            <div>
+                <p id="show-tk3">0</p>
+            </div>
+        </div>
+        <div class="flex-class6">
+            <div><i class="fa-solid fa-person"></i> Foreign Child</div>
+            <div>
+                <p id="show-tk4">0</p>
+            </div>
+        </div>
+        <div class="flex-class7">
+            <h2>Overall Order Cost</h2>
+            <div>
+                <p id="overall-order-cost">0</p>
+            </div>
+            <div><button id="place-order">Place Order</button></div>
+            <div><button id="order-fav" onclick="GetFavItems()">Order Favourite</button></div>
+        </div>
+    </div>
+
+    <!--POPUP MSG-->
+    <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p>Thankyou For the Custom Reservation</p>
+            <p id="thankyou-name"></p>
+            <p id="loyalty-points"></p>
+        </div>
+
+    </div>
+    <div>
+        <a href="Museum.html"><button>Go to museum</button></a>
+    </div>
+
+    <script src="js/index.js"></script>
+</body>
+
+</html>

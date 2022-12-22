@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,300,100' rel='stylesheet' type='text/css'>
+    <script src="https://kit.fontawesome.com/9ff456d83f.js" crossorigin="anonymous"></script><title>Document</title>
+    <link rel="stylesheet" href="styles/Paymentform.css">
+    <title>Payement form</title>
+</head>
+<body>
+    <h1 class="topic">Select Amount For Donation</h1>
+    <div class="btn-flex-container">
+        <div>
+            <button id="d-amount-1">100</button>
+        </div>
+        <div>
+            <button id="d-amount-2">500</button>
+        </div>
+        <div>
+            <button id="d-amount-3">1000</button>
+        </div>
+        <div>
+            <button id="d-amount-4">2000</button>
+        </div>
+        <div>
+            <button id="d-amount-5">5000</button>
+        </div>
+        <div>
+            <button id="d-amount-6">10000</button>
+        </div>
+    </div>
+    <form id="credit-card">
+        <div class="form-header">
+          <h4 class="title">Credit card detail</h4>
+        </div>
+            <!-- Name -->
+            <div class="form-control">
+              <h2></h2>
+                <input type="text" id="name" placeholder="Name On Card">
+                <i class="fas fa-check-circle"></i>
+                <i class="fas fa-exclamation-circle"></i>
+                <p>Error Meassage</p>
+            </div>
+            <!-- amount -->
+            <div class="form-control">
+              <input type="text" class="amount" id="amount" placeholder="Amount">
+              <i class="fas fa-check-circle"></i>
+              <i class="fas fa-exclamation-circle"></i>
+              <p>Error Meassage</p>
+            </div>
+          <!-- Card Number -->
+          <div class="form-control">
+            <input type="text" id="card-number" placeholder="Card Number - 0000 0000 0000 0000">
+            <i class="fas fa-check-circle"></i>
+            <i class="fas fa-exclamation-circle"></i>
+            <p>Error Meassage</p>
+          </div>
+       
+          <!-- Date Field -->
+          <div class="date-field">
+            <h4>Exp Month and Year</h4>
+            <div class="month">
+              <select name="Month">
+                <option value="january">January</option>
+                <option value="february">February</option>
+                <option value="march">March</option>
+                <option value="april">April</option>
+                <option value="may">May</option>
+                <option value="june">June</option>
+                <option value="july">July</option>
+                <option value="august">August</option>
+                <option value="september">September</option>
+                <option value="october">October</option>
+                <option value="november">November</option>
+                <option value="december">December</option>
+              </select>
+            </div>
+            <div class="year">
+              <select name="Year">
+                <option value="2022">2022</option>
+                <option value="2023">2023</option>
+                <option value="2024">2024</option>
+              </select>
+            </div>
+          </div>
+       
+          <!-- Card Verification Field -->
+          <div class="card-verification">
+            <div class="cvv-input ">
+              <input type="text" placeholder="CVV" id="cvv-value">
+              <p>Error Meassage</p>
+            </div>
+            <div class="cvv-details">
+              <p>3 or 4 digits usually found <br> on the signature strip</p>
+            </div>
+          </div>
+       
+          <!-- Buttons -->
+          <button type="submit" class="proceed-btn" onclick="popup()">Proceed</button>
+        
+      </form>
+      <div class="spacing"></div>
+    <script src="js/Paymentform.js"></script>
+</body>
+</html>

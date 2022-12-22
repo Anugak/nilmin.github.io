@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/9ff456d83f.js" crossorigin="anonymous"></script>
+    <title>Document</title>
+    <link rel="stylesheet" href="styles/infostyle.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <form id="create-account-form" action="index2.html" method="GET">
+        <div class="header">
+            <h1 class="heading">Let's Have a Tour</h1>
+            <h2>Fill Out the Form</h2>
+        </div>
+
+        <div class="form-control">
+            <label for="fullname">Full Name*</label>
+            <input type="text" placeholder="jason bourne" id="fullname" name="fullname">
+            <i class="fas fa-check-circle"></i>
+            <i class="fas fa-exclamation-circle"></i>
+            <p>Error Meassage</p>
+        </div>
+        <!-- Number -->
+        <div class="form-control">
+            <label for="number">Number*</label>
+            <input type="number" placeholder="+94" id="number" name="number">
+            <i class="fas fa-check-circle"></i>
+            <i class="fas fa-exclamation-circle"></i>
+            <p>Error Meassage</p>
+        </div>
+        <!-- Email -->
+        <div class="form-control">
+            <label for="email">Email*</label>
+            <input type="email" placeholder="jason@gmail.com" id="email" name="email">
+            <i class="fas fa-check-circle"></i>
+            <i class="fas fa-exclamation-circle"></i>
+            <p>Error Meassage</p>
+        </div>
+
+        <!-- Email2 -->
+        <div class="form-control">
+            <label for="email2">Confirm Email*</label>
+            <input type="email" placeholder="jason@gmail.com" id="email2" name="email2">
+            <i class="fas fa-check-circle"></i>
+            <i class="fas fa-exclamation-circle"></i>
+            <p>Error Meassage</p>
+        </div>
+        <div class="form-control">
+            <label>Gender</label>
+            <select name="gender" id="gender">
+                <option id="male" name="gender" value="male">Male</option>
+                <option id="female" name="gender" value="female">Female</option>
+                <option id="other" name="gender" value="other">Other</option>
+            </select>
+        </div>
+        <div class="calender-css">
+            <h2>When are you Coming?</h2>
+            <input type="date" name="date" id="tourdate" min="2022-12-01">
+        </div>
+        <a><button type="submit" class="btn" onclick="store()">Submit</button></a>
+    </form>
+    <script src="js/info.js"></script>
+</body>
+
+</html>
